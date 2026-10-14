@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achmad Ja'far Shodiq | Civil Engineering, Construction Drafter & Supervisor</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- html2pdf.js CDN untuk fitur cetak/download PDF langsung -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+  
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0F172A',
+              light: '#1E293B',
+              dark: '#020617',
+            },
+            gold: {
+              light: '#F4E071',
+              DEFAULT: '#D4AF37',
+              dark: '#AA820A',
+            },
+            cream: '#FAFAFA',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-cream text-navy font-sans antialiased selection:bg-gold selection:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full bg-cream/90 backdrop-blur-md z-50 border-b border-gray-200/60 transition-all">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold tracking-tight text-navy hover:text-gold transition">
+        AJS<span class="text-gold">.</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-gold transition">About Me</a>
+        <a href="#experience" class="hover:text-gold transition">Experience</a>
+        <a href="#projects" class="hover:text-gold transition">Projects</a>
+        <a href="#skills" class="hover:text-gold transition">Skills</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button onclick="downloadPDF()" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-gold rounded-full hover:bg-gold-dark transition shadow-sm">
+          <i class="fa-solid fa-file-arrow-down mr-1.5"></i> Download PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN WRAPPER FOR PDF EXPORT ================= -->
+  <div id="pdf-content">
+    <main class="pt-20">
+      
+      <!-- ================= HERO SECTION ================= -->
+      <section id="hero" class="min-h-[88vh] flex items-center justify-center relative px-6 py-16 bg-gradient-to-b from-white to-cream">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 text-gold-dark text-xs font-semibold tracking-wide border border-gold/20">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            Civil Engineering Graduate, Construction Drafter & Supervisor
+          </div>
+          
+          <h1 class="text-4xl md:text-6xl font-extrabold text-navy tracking-tight leading-tight">
+            Achmad Ja'far Shodiq
+          </h1>
+          
+          <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
+            "Precision in every technical drawing, excellence in site supervision and structural planning."
+          </p>
+
+          <div class="pt-4 flex flex-wrap justify-center gap-4">
+            <a href="#projects" class="px-7 py-3.5 bg-navy text-white font-medium text-sm rounded-lg shadow-md hover:bg-navy-light hover:shadow-lg transition">
+              View Projects
+            </a>
+            <a href="#contact" class="px-7 py-3.5 border border-gold text-navy font-medium text-sm rounded-lg hover:bg-gold hover:text-white transition">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="pt-12 flex justify-center gap-8 text-slate-400">
+            <a href="mailto:japar9329@gmail.com" class="hover:text-gold transition" title="Email"><i class="fa-solid fa-envelope text-xl"></i></a>
+            <a href="https://linkedin.com/in/Achmad Ja'far Shodiq" target="_blank" class="hover:text-gold transition" title="LinkedIn"><i class="fa-brands fa-linkedin text-xl"></i></a>
+            <a href="https://instagram.com/ajafarshq" target="_blank" class="hover:text-gold transition" title="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ME ================= -->
+      <section id="about" class="py-20 px-6 bg-white border-y border-slate-100">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="md:w-1/3 space-y-4">
+              <h2 class="text-xs uppercase tracking-widest text-gold font-bold">About Me</h2>
+              <h3 class="text-3xl font-bold text-navy leading-snug">Professional Profile</h3>
+              <div class="w-12 h-1 bg-gold rounded"></div>
+            </div>
+            <div class="md:w-2/3 space-y-6 text-slate-600 leading-relaxed">
+              <p>
+                Civil Engineering graduate with practical experience in construction drafting, site supervision, and project administration. Experienced in preparing 2D technical drawings, infrastructure plans, and structural shop drawings using AutoCAD, including concrete roads, street lighting systems, retaining walls, and building structures[cite: 6].
+              </p>
+              <p>
+                Familiar with construction site activities such as concrete volume calculations, rebar data recording, beam mapping, Bar Bending Schedule (BBS) mapping, and daily and monthly reporting[cite: 6]. Proficient in Microsoft Office and Autodesk Robot Structural Analysis, with a strong commitment to accuracy, responsibility, teamwork, and continuous professional development[cite: 6].
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EXPERIENCE ================= -->
+      <section id="experience" class="py-20 px-6 bg-cream">
+        <div class="max-w-5xl mx-auto space-y-12">
+          <div class="text-center space-y-2">
+            <h2 class="text-xs uppercase tracking-widest text-gold font-bold">Career Journey</h2>
+            <h3 class="text-3xl font-bold text-navy">Professional Experience</h3>
+          </div>
+
+          <div class="space-y-8 relative before:absolute before:inset-0 before:left-3 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-200">
+            
+            <!-- Experience Item 1 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-gold text-xs shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <i class="fa-solid fa-drafting-compass"></i>
+              </div>
+              <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2rem)] bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-semibold text-gold tracking-wide uppercase">Drafter</span>
+                <h4 class="text-lg font-bold text-navy mt-1">PT Prima Nata Konstruksi (PNK)[cite: 6]</h4>
+                <p class="text-xs text-slate-400 mb-4">Ground Control Interception (GCI) Project, Ploso, Jombang[cite: 6]</p>
+                <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                  <li>Prepared technical drawings and infrastructure plans using AutoCAD[cite: 6].</li>
+                  <li>Developed layout, section, and detail drawings for concrete roads, street lighting systems (PJU), and retaining walls (DPT)[cite: 6].</li>
+                  <li>Produced architectural layout and structural drawings for Mess Paskhas[cite: 6].</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-gold text-xs shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2rem)] bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-semibold text-gold tracking-wide uppercase">January 5 – March 31, 2026[cite: 6]</span>
+                <h4 class="text-lg font-bold text-navy mt-1">Assistant Site Supervisor</h4>
+                <p class="text-xs text-slate-400 mb-4">PT Prima Cipta Konstruksi (PCK) — Pakuwon Mall Phase 5[cite: 6]</p>
+                <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                  <li>Assisted the Supervisor in monitoring construction activities from the LG floor to the 5th floor[cite: 6].</li>
+                  <li>Calculated concrete casting volumes and recorded steel material availability[cite: 6].</li>
+                  <li>Performed beam mapping and Bar Bending Schedule (BBS) mapping[cite: 6].</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-gold text-xs shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <div class="w-[calc(100%-2.5rem)] md:w-[calc(50%-2rem)] bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-semibold text-gold tracking-wide uppercase">January 6 – February 7, 2025[cite: 6]</span>
+                <h4 class="text-lg font-bold text-navy mt-1">Project Administration Assistant</h4>
+                <p class="text-xs text-slate-400 mb-4">PT Manajemen Konstruksi Utama — Aston Inn Hotel, Lumajang[cite: 6]</p>
+                <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                  <li>Assisted with mapping wall and ceramic tile works[cite: 6].</li>
+                  <li>Assisted in calculating building components and project administration workflows[cite: 6].</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section id="projects" class="py-20 px-6 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto space-y-12">
+          <div class="text-center space-y-2">
+            <h2 class="text-xs uppercase tracking-widest text-gold font-bold">Portfolio Highlights</h2>
+            <h3 class="text-3xl font-bold text-navy">Key Projects & Scope</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="group bg-cream rounded-xl p-8 border border-slate-200/85 hover:border-gold transition-all duration-300 space-y-4">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 bg-navy text-gold rounded">INFRASTRUCTURE</span>
+                <i class="fa-solid fa-road text-gold text-xl"></i>
+              </div>
+              <h4 class="text-xl font-bold text-navy group-hover:text-gold transition">Mess Paskhas & Infrastructure[cite: 6]</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Prepared layout and structural drawings for Mess Paskhas, concrete roads, PJU, and retaining walls (DPT) at Ploso, Jombang[cite: 6].
+              </p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group bg-cream rounded-xl p-8 border border-slate-200/85 hover:border-gold transition-all duration-300 space-y-4">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 bg-navy text-gold rounded">SUPERVISION</span>
+                <i class="fa-solid fa-building text-gold text-xl"></i>
+              </div>
+              <h4 class="text-xl font-bold text-navy group-hover:text-gold transition">Pakuwon Mall Phase 5[cite: 6]</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Hotel construction monitoring, concrete volume estimation, beam mapping, and BBS mapping under PT Prima Cipta Konstruksi[cite: 6].
+              </p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group bg-cream rounded-xl p-8 border border-slate-200/85 hover:border-gold transition-all duration-300 space-y-4">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 bg-navy text-gold rounded">ADMINISTRATION</span>
+                <i class="fa-solid fa-hotel text-gold text-xl"></i>
+              </div>
+              <h4 class="text-xl font-bold text-navy group-hover:text-gold transition">Aston Inn Hotel Lumajang[cite: 6]</h4>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Wall and ceramic tile mapping, quantity calculation, and documentation support under PT Manajemen Konstruksi Utama[cite: 6].
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ================= -->
+      <section id="skills" class="py-20 px-6 bg-cream">
+        <div class="max-w-5xl mx-auto space-y-12">
+          <div class="text-center space-y-2">
+            <h2 class="text-xs uppercase tracking-widest text-gold font-bold">Expertise & Stack</h2>
+            <h3 class="text-3xl font-bold text-navy">Skills & Capabilities</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Core Competencies -->
+            <div class="bg-white p-8 rounded-xl border border-slate-100 space-y-4">
+              <h4 class="text-lg font-bold text-navy border-b border-slate-100 pb-3 flex items-center gap-2">
+                <i class="fa-solid fa-star text-gold text-sm"></i> Core Competencies
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 bg-cream text-navy text-xs font-semibold rounded-full border border-slate-200">Construction Drafting[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-cream text-navy text-xs font-semibold rounded-full border border-slate-200">Infrastructure Planning[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-cream text-navy text-xs font-semibold rounded-full border border-slate-200">Site Supervision[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-cream text-navy text-xs font-semibold rounded-full border border-slate-200">Quantity Calculation[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-cream text-navy text-xs font-semibold rounded-full border border-slate-200">Structural Documentation[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-cream text-navy text-xs font-semibold rounded-full border border-slate-200">Project Administration[cite: 6]</span>
+              </div>
+            </div>
+
+            <!-- Technical Stack -->
+            <div class="bg-white p-8 rounded-xl border border-slate-100 space-y-4">
+              <h4 class="text-lg font-bold text-navy border-b border-slate-100 pb-3 flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code text-gold text-sm"></i> Technical & Software Stack
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 bg-navy text-gold text-xs font-semibold rounded-full">AutoCAD 2D[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-navy text-gold text-xs font-semibold rounded-full">SketchUp[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-navy text-gold text-xs font-semibold rounded-full">Autodesk RSAP[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-slate-100 text-navy text-xs font-semibold rounded-full">Microsoft Excel[cite: 6]</span>
+                <span class="px-3 py-1.5 bg-slate-100 text-navy text-xs font-semibold rounded-full">Microsoft Word[cite: 6]</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section id="contact" class="py-20 px-6 bg-navy text-white relative">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+          <div class="space-y-2">
+            <h2 class="text-xs uppercase tracking-widest text-gold font-bold">Let's Connect</h2>
+            <h3 class="text-3xl font-bold">Ready to Collaborate on Construction Projects?</h3>
+            <p class="text-slate-400 text-sm max-w-lg mx-auto">
+              Open for professional opportunities in Civil Engineering, Construction Drafting, and Site Supervision.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto pt-4">
+            <a href="mailto:japar9329@gmail.com" class="p-4 rounded-lg bg-navy-light border border-slate-800 hover:border-gold transition flex flex-col items-center gap-2">
+              <i class="fa-solid fa-envelope text-gold text-xl"></i>
+              <span class="text-xs text-slate-300">japar9329@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/Achmad Ja'far Shodiq" target="_blank" class="p-4 rounded-lg bg-navy-light border border-slate-800 hover:border-gold transition flex flex-col items-center gap-2">
+              <i class="fa-brands fa-linkedin text-gold text-xl"></i>
+              <span class="text-xs text-slate-300">Achmad Ja'far Shodiq</span>
+            </a>
+            <a href="https://instagram.com/ajafarshq" target="_blank" class="p-4 rounded-lg bg-navy-light border border-slate-800 hover:border-gold transition flex flex-col items-center gap-2">
+              <i class="fa-brands fa-instagram text-gold text-xl"></i>
+              <span class="text-xs text-slate-300">@ajafarshq</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-navy-dark text-slate-500 py-6 text-center text-xs border-t border-slate-800/80">
+      <p>© 2026 Achmad Ja'far Shodiq. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Script untuk Trigger Download PDF -->
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('pdf-content');
+      const options = {
+        margin:       0,
+        filename:     'Achmad_Jafar_Shodiq_Civil_Portfolio.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true, letterRendering: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      
+      html2pdf().from(element).set(options).save();
+    }
+  </script>
+
+</body>
+</html>
